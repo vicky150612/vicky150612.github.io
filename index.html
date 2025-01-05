@@ -1,27 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="TP1.css">
-    <title>Tic Tac Toe</title>
+    <title>Schedule</title>
+    <link rel="stylesheet" href="Timetable.css">
+    <script src="Timetable.js"></script>
 </head>
+
 <body>
-    <h1>TIC TAC TOE</h1>
-    <!-- create a basic board-->
-    <div id="board" class="board">
-        <div class="cell" data-cell="0" id = "c1" onclick="b1()"></div>
-        <div class="cell" data-cell="1" id = "c2" onclick="b2()"></div>
-        <div class="cell" data-cell="2" id = "c3" onclick="b3()"></div>
-        <div class="cell" data-cell="3" id = "c4" onclick="b4()"></div>
-        <div class="cell" data-cell="4" id = "c5" onclick="b5()"></div>
-        <div class="cell" data-cell="5" id = "c6" onclick="b6()"></div>
-        <div class="cell" data-cell="6" id = "c7" onclick="b7()"></div>
-        <div class="cell" data-cell="7" id = "c8" onclick="b8()"></div>
-        <div class="cell" data-cell="8" id = "c9" onclick="b9()"></div>
+    <div class="schedule">
+        <h2 id="dayOfWeek">Monday</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time Slot</th>
+                    <th>Activity</th>
+                </tr>
+            </thead>
+            <tbody id="Monday">
+                <tr>
+                    <td>6:30 AM - 8:30 AM</td>
+                    <td>Review/Prepare (Linear Algebra)</td>
+                </tr>
+                <tr>
+                    <td>9:45 AM - 11:15 AM</td>
+                    <td>Linear Algebra</td>
+                </tr>
+                <tr>
+                    <td>11:15 AM - 12:30 PM</td>
+                    <td>Review Linear Algebra notes</td>
+                </tr>
+                <tr>
+                    <td>2:00 PM - 3:30 PM</td>
+                    <td>Assignments or Economics reading</td>
+                </tr>
+                <tr>
+                    <td>3:30 PM - 5:00 PM</td>
+                    <td>Economics II</td>
+                </tr>
+                <tr>
+                    <td>5:00 PM - 6:30 PM</td>
+                    <td>Problem-solving (Data Structures/Networks)</td>
+                </tr>
+                <tr>
+                    <td>9:30 PM - 11:00 PM</td>
+                    <td>Revise/Long-term project</td>
+                </tr>
+            </tbody>
+            <tbody id="Tuesday">
+                <tr>
+                    <td>6:30 AM - 7:30 AM</td>
+                    <td>Prepare for classes (Architecture/Algorithms)</td>
+                </tr>
+                <tr>
+                    <td>8:00 AM - 9:30 AM</td>
+                    <td>Computer Architecture</td>
+                </tr>
+                <tr>
+                    <td>9:30 AM - 11:00 AM</td>
+                    <td>Data Structures and Algorithms</td>
+                </tr>
+                <tr>
+                    <td>11:00 AM - 12:30 PM</td>
+                    <td>Computer Networks</td>
+                </tr>
+                <tr>
+                    <td>2:00 PM - 4:00 PM</td>
+                    <td>Data Structures Lab</td>
+                </tr>
+                <tr>
+                    <td>4:00 PM - 5:30 PM</td>
+                    <td>Light review of lab work</td>
+                </tr>
+                <tr>
+                    <td>5:30 PM - 7:00 PM</td>
+                    <td>Prepare for next day/Assignments</td>
+                </tr>
+                <tr>
+                    <td>9:30 PM - 11:00 PM</td>
+                    <td>Reflect on the day's classes</td>
+                </tr>
+            </tbody>
+            <tbody id="Wednesday">
+                <tr>
+                    <td>6:30 AM - 8:30 AM</td>
+                    <td>Prepare for Networks or Linear Algebra</td>
+                </tr>
+                <tr>
+                    <td>9:45 AM - 11:15 AM</td>
+                    <td>Linear Algebra</td>
+                </tr>
+                <tr>
+                    <td>11:15 AM - 12:30 PM</td>
+                    <td>Review class notes/short quizzes</td>
+                </tr>
+                <tr>
+                    <td>2:00 PM - 3:30 PM</td>
+                    <td>Deep focus on Data Structures</td>
+                </tr>
+                <tr>
+                    <td>5:30 PM - 7:00 PM</td>
+                    <td>Practice programming/lab work</td>
+                </tr>
+                <tr>
+                    <td>9:30 PM - 11:00 PM</td>
+                    <td>Light review/relax</td>
+                </tr>
+            </tbody>
+            <tbody id="Thursday">
+                <tr>
+                    <td>6:30 AM - 7:30 AM</td>
+                    <td>Prepare for classes (Architecture/Algorithms)</td>
+                </tr>
+                <tr>
+                    <td>8:00 AM - 9:30 AM</td>
+                    <td>Computer Architecture</td>
+                </tr>
+                <tr>
+                    <td>9:30 AM - 11:00 AM</td>
+                    <td>Data Structures and Algorithms</td>
+                </tr>
+                <tr>
+                    <td>11:00 AM - 12:30 PM</td>
+                    <td>Computer Networks</td>
+                </tr>
+                <tr>
+                    <td>2:00 PM - 4:00 PM</td>
+                    <td>Data Structures Lab</td>
+                </tr>
+                <tr>
+                    <td>4:00 PM - 5:30 PM</td>
+                    <td>Relax + review Networks</td>
+                </tr>
+                <tr>
+                    <td>5:30 PM - 7:00 PM</td>
+                    <td>Focus on Linear Algebra problems</td>
+                </tr>
+                <tr>
+                    <td>9:30 PM - 11:00 PM</td>
+                    <td>Summarize the day's learning</td>
+                </tr>
+            </tbody>
+            <tbody id="Friday">
+                <tr>
+                    <td>6:30 AM - 9:30 AM</td>
+                    <td>Study session (Architecture/Data Structures)</td>
+                </tr>
+                <tr>
+                    <td>11:30 AM - 1:00 PM</td>
+                    <td>Data Structures Tutorial</td>
+                </tr>
+                <tr>
+                    <td>2:00 PM - 3:30 PM</td>
+                    <td>Linear Algebra Tutorial</td>
+                </tr>
+                <tr>
+                    <td>3:30 PM - 5:30 PM</td>
+                    <td>Review the week's progress</td>
+                </tr>
+                <tr>
+                    <td>5:30 PM - 7:00 PM</td>
+                    <td>Solve problems/projects</td>
+                </tr>
+                <tr>
+                    <td>9:30 PM - 11:00 PM</td>
+                    <td>Light reading/weekly summary</td>
+                </tr>
+            </tbody>
+            <tbody id="Saturday">
+                <tr>
+                    <td>6:30 AM - 8:30 AM</td>
+                    <td>Review core subjects (e.g., Data Structures)</td>
+                </tr>
+                <tr>
+                    <td>9:00 AM - 12:30 PM</td>
+                    <td>Assignments/projects</td>
+                </tr>
+                <tr>
+                    <td>2:00 PM - 4:00 PM</td>
+                    <td>Coding practice/mock tests</td>
+                </tr>
+                <tr>
+                    <td>5:00 PM - 7:00 PM</td>
+                    <td>Review Linear Algebra/Networks</td>
+                </tr>
+                <tr>
+                    <td>9:30 PM - 11:00 PM</td>
+                    <td>Reflection + pending work</td>
+                </tr>
+            </tbody>
+            <tbody id="Sunday">
+                <tr>
+                    <td>6:30 AM - 8:30 AM</td>
+                    <td>Review weak areas (Economics/Linear Algebra)</td>
+                </tr>
+                <tr>
+                    <td>9:00 AM - 12:30 PM</td>
+                    <td>Assignments or prep for next week</td>
+                </tr>
+                <tr>
+                    <td>2:00 PM - 4:00 PM</td>
+                    <td>Light study/group discussions</td>
+                </tr>
+                <tr>
+                    <td>5:00 PM - 7:00 PM</td>
+                    <td>Relax or light review</td>
+                </tr>
+                <tr>
+                    <td>9:30 PM - 11:00 PM</td>
+                    <td>Plan the upcoming week</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <!-- <p id = "a0">Current turn : x</p> -->
-    <div id="message" class="message"></div>
-    <script src="TP1.js"></script>
 </body>
+
 </html>
